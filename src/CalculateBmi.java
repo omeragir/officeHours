@@ -1,6 +1,25 @@
 public class CalculateBmi {
     public static void main(String[] args) {
+        double mass = 98;
+        double height = 2;
+        double bmi = mass / (height * height);
 
+        if ((mass >= 40 && mass <= 185) && (height >= 1.2 && height <= 2.5)) {
+            if (bmi <= 18.5) {
+                System.out.println(" Underweight");
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                System.out.println(" Normal weight");
+
+            } else if (bmi >= 25 && bmi <= 29.9) {
+                System.out.println("Overweight");
+
+            } else {
+                System.out.println("Obese");
+            }
+
+        } else {
+            System.out.println("Sorry we cannot calculate the BMI with these metrics");
+        }
 
     }
 }
